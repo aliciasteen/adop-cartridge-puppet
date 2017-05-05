@@ -10,7 +10,7 @@ def puppetControlRepoUrl = 'ssh://jenkins@gerrit:29418/${GERRIT_PROJECT}'
 
 def buildAppJob = pipelineJob(projectFolderName + "/PuppetPipeline")
 
-pipelineJob('PuppetPipeline') {
+buildAppJob.with {
     definition {
         cps {
             script("""
