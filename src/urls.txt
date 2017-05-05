@@ -1,1 +1,1 @@
-
+https://github.com/mrzarquon/adop-cartridge-puppet-control-repo.git
