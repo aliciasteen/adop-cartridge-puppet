@@ -1,21 +1,37 @@
-# Cartridge Skeleton
-The purpose of this repository is to define a base cartridge with empty job definitions and pipelines to allow developers to rapidly develop their cartridges.
+# What is Cartridge?
 
-## Stucture
-A cartridge is broken down into the following sections:
+A Cartridge is a set of resources that are loaded into the Platform for a particular project. They may contain anything from a simple reference implementation for a technology to a set of best practice examples for building, deploying, and managing a technology stack that can be used by a project.
 
- * infra
-  * For infrastructure-related items
- * jenkins
-  * For Jenkins-related items
- * src
-  * For source control-related items
+This cartridge consists of source code repositories and Jenkins jobs.
 
-## Metadata
-Each cartridge should contain a "metadata.cartridge" file that specifies the following metadata:
+## Source code repositories
 
- * `CARTRIDGE_SDK_VERSION`
-  * This defines the version of the Cartridge SDK that the cartridge conforms to
- 
-## Using this Repository
-When developing a cartridge it is advisable to make a copy of this repository and remove all of the README.md files so that it serves as a basis for the new cartridge.
+Cartridge loads the source code repositories:
+
+* [Puppet Control Repo](https://github.com/mrzarquon/adop-cartridge-puppet-control-repo.git)
+
+## Jenkins Jobs
+
+This cartridge provides a Jenkins Pipeline view to -
+
+* Detect repo changes
+* Perform Verify checks using Puppet Verify
+* Perform Lint checks using Puppet Lint
+* Run noop codeDeploy
+* Run codeDepoloy
+
+This cartidge is designed to be used alongside the [ADOP Puppet platform extension](https://github.com/aliciasteen/adop-platform-extension-puppet).
+
+# License
+Please view [license information](LICENSE.md) for the software contained on this image.
+
+## Documentation
+Documentation will be captured within this README.md and this repository's Wiki.
+
+## Issues
+If you have any problems with or questions about this image, please contact us through a [GitHub issue](https://github.com/aliciasteen/adop-cartridge-puppet/issues).
+
+## Contribute
+You are invited to contribute new features, fixes, or updates, large or small; we are always thrilled to receive pull requests, and do our best to process them as fast as we can.
+
+Before you start to code, we recommend discussing your plans through a [GitHub issue](https://github.com/aliciasteen/adop-cartridge-puppet/issues), especially for more ambitious contributions. This gives other contributors a chance to point you in the right direction, give you feedback on your design, and help you find out if someone else is working on the same thing.
